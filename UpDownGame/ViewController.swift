@@ -19,5 +19,9 @@ class ViewController: UIViewController {
     @IBAction func slicerValueChange(_ sender: UISlider){
         print(sender.value)
     }
+    
+    @IBAction func touchUpHitButton(_ sender: UIButton){
+        print( slider.value)
+    }
 }
 
