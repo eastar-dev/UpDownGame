@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         slider.setThumbImage(#imageLiteral(resourceName: "slider_thumb"), for: .normal)
-        // Do any additional setup after loading the view.
+        reset()
     }
     
     @IBAction func slicerValueChange(_ sender: UISlider){
@@ -27,6 +27,11 @@ class ViewController: UIViewController {
     
     @IBAction func touchUpResetButton(_ sender: UIButton){
         print("touchUpResetButton")
+        reset()
+    }
+    
+    private func reset(){
+        print("Reset")
     }
 }
 
