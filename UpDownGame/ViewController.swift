@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     
     private func reset(){
         print("Reset")
+        slider.value = 15
     }
 }
 
