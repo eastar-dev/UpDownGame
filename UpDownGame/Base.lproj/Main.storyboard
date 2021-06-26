@@ -115,7 +115,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="maxValueLable" destination="Ikc-SA-HQT" id="Dxu-q7-4nS"/>
+                        <outlet property="minValueLable" destination="ou4-mh-Qea" id="XUo-58-Xhg"/>
                         <outlet property="slider" destination="bH2-FK-cGP" id="yhB-c2-yjt"/>
+                        <outlet property="sliderValue" destination="IxF-Q6-XpK" id="0hf-Do-zhr"/>
+                        <outlet property="tryCountLable" destination="EtQ-ab-o0M" id="OxV-tU-hR4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

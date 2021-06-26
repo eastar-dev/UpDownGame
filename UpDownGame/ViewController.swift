@@ -9,7 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var rnadomValeu: Int = 0
+    var tryCount : Int = 0
+    
+    
     @IBOutlet weak var slider : UISlider!
+    @IBOutlet weak var tryCountLable : UILabel!
+    @IBOutlet weak var sliderValue : UILabel!
+    
+    @IBOutlet weak var minValueLable : UILabel!
+    @IBOutlet weak var maxValueLable : UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
