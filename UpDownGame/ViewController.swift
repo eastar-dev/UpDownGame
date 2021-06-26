@@ -34,6 +34,20 @@ class ViewController: UIViewController {
         sender.value = Float(value)
     }
     
+    func showMessage(message : String){
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK",
+                                     style: .default) { UIAlertAction in
+            self.reset()
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true) {
+            print("presented")
+        }
+    }
+    
+    
     @IBAction func touchUpHitButton(_ sender: UIButton){
         print( slider.value)
         let hitValue = Int(slider.value)
@@ -41,16 +55,22 @@ class ViewController: UIViewController {
         tryCount+=1
         tryCountLable.text = "\(tryCount) / 5"
         
-        if randomValue == hitValue {
-            print("You Hit!!")
+        
+        if tryCount >= 5 {
+            showMessage(message: "You lose...")
             reset()
             return
         }
         
-        if tryCount >= 5 {
-            print("You lose")
+        if hitValue < randomValue {
+            slider.value = Float(hitValue)
+            minValueLable.text = "\(hitValue)"
+        } else if hitValue > randomValue {
+            slider.value = Float(hitValue)
+            maxValueLable.text = "\(hitValue)"
+        } else {
+            showMessage(message: "You Hit!!")
             reset()
-            return
         }
     }
     
