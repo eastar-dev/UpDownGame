@@ -80,6 +80,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="sQK-NN-06F" kind="presentation" modalTransitionStyle="crossDissolve" id="Ym4-go-E54"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikc-SA-HQT">
                                 <rect key="frame" x="814" y="198.5" width="18" height="17"/>
@@ -133,19 +136,56 @@
                     <view key="view" contentMode="scaleToFill" id="aJn-40-6L2">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="27H-ib-Owq">
+                                <rect key="frame" x="76" y="126.5" width="167" height="161"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-dx-PtG">
+                                <rect key="frame" x="76" y="32" width="52" height="39"/>
+                                <state key="normal" image="xmark.rectangle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="regular"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="sQK-NN-06F" eventType="touchUpInside" id="3Kw-px-i2g"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TSW-FE-jgU">
+                                <rect key="frame" x="275" y="32" width="545" height="329"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6ZV-Uq-jFE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bTb-dx-PtG" firstAttribute="top" secondItem="6ZV-Uq-jFE" secondAttribute="top" constant="32" id="6qf-hq-zus"/>
+                            <constraint firstItem="6ZV-Uq-jFE" firstAttribute="trailing" secondItem="TSW-FE-jgU" secondAttribute="trailing" constant="32" id="Ivp-gR-ak5"/>
+                            <constraint firstItem="TSW-FE-jgU" firstAttribute="top" secondItem="6ZV-Uq-jFE" secondAttribute="top" constant="32" id="Qas-ca-P4f"/>
+                            <constraint firstItem="TSW-FE-jgU" firstAttribute="leading" secondItem="27H-ib-Owq" secondAttribute="trailing" constant="32" id="RDP-9n-Nne"/>
+                            <constraint firstItem="27H-ib-Owq" firstAttribute="centerY" secondItem="aJn-40-6L2" secondAttribute="centerY" id="RKR-jD-Zaz"/>
+                            <constraint firstItem="27H-ib-Owq" firstAttribute="leading" secondItem="6ZV-Uq-jFE" secondAttribute="leading" constant="32" id="feh-BJ-7Qg"/>
+                            <constraint firstItem="6ZV-Uq-jFE" firstAttribute="bottom" secondItem="TSW-FE-jgU" secondAttribute="bottom" constant="32" id="uJw-dG-EQn"/>
+                            <constraint firstItem="bTb-dx-PtG" firstAttribute="leading" secondItem="6ZV-Uq-jFE" secondAttribute="leading" constant="32" id="ufv-Xl-Ft3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixu-ff-y91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="116"/>
+            <point key="canvasLocation" x="805.58035714285711" y="115.94202898550725"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="memories" catalog="system" width="128" height="110"/>
+        <image name="xmark.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="yagom_symbol" width="167" height="160.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
