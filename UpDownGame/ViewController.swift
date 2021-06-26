@@ -64,9 +64,12 @@ class ViewController: UIViewController {
         
         if hitValue < randomValue {
             slider.value = Float(hitValue)
+            slider.minimumValue = slider.value
             minValueLable.text = "\(hitValue)"
+            
         } else if hitValue > randomValue {
             slider.value = Float(hitValue)
+            slider.maximumValue = slider.value
             maxValueLable.text = "\(hitValue)"
         } else {
             showMessage(message: "You Hit!!")
