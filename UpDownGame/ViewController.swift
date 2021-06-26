@@ -29,10 +29,29 @@ class ViewController: UIViewController {
     
     @IBAction func slicerValueChange(_ sender: UISlider){
         print(sender.value)
+        let value = Int(slider.value)
+        sliderValue.text = String(value)
+        sender.value = Float(value)
     }
     
     @IBAction func touchUpHitButton(_ sender: UIButton){
         print( slider.value)
+        let hitValue = Int(slider.value)
+        
+        tryCount+=1
+        tryCountLable.text = "\(tryCount) / 5"
+        
+        if randomValue == hitValue {
+            print("You Hit!!")
+            reset()
+            return
+        }
+        
+        if tryCount >= 5 {
+            print("You lose")
+            reset()
+            return
+        }
     }
     
     @IBAction func touchUpResetButton(_ sender: UIButton){
